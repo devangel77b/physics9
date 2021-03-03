@@ -1,38 +1,38 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{ew305}[USNA EW305 Linear Control Systems course materials style file]
+\ProvidesPackage{physics9}[Physics 9 course materials style file]
 
 \RequirePackage{etoolbox}
-\newbool{usnahw}\newbool{usnaexam}\newbool{usnalab}\newbool{usnahandout}\newbool{usnaquiz}\newbool{usnaslides}
-\DeclareOption{hw}{\booltrue{usnahw}}
-\DeclareOption{quiz}{\booltrue{usnaquiz}}
-\DeclareOption{exam}{\booltrue{usnaexam}}
-\DeclareOption{lab}{\booltrue{usnalab}}
-\DeclareOption{handout}{\booltrue{usnahandout}}
-\DeclareOption{slides}{\booltrue{usnaslides}}
+\newbool{mobeardhw}\newbool{mobeardexam}\newbool{mobeardlab}\newbool{mobeardhandout}\newbool{mobeardquiz}\newbool{mobeardslides}
+\DeclareOption{hw}{\booltrue{mobeardhw}}
+\DeclareOption{quiz}{\booltrue{mobeardquiz}}
+\DeclareOption{exam}{\booltrue{mobeardexam}}
+\DeclareOption{lab}{\booltrue{mobeardlab}}
+\DeclareOption{handout}{\booltrue{mobeardhandout}}
+\DeclareOption{slides}{\booltrue{mobeardslides}}
 \ExecuteOptions{}
 \ProcessOptions\relax
 
-\newcommand{\usnaCheckOptions}{
-\ifbool{usnahw}{hw}{nothw}
-\ifbool{usnaquiz}{quiz}{notquiz}\
-\ifbool{usnaexam}{exam}{notexam}
-\ifbool{usnalab}{lab}{notlab}
-\ifbool{usnahandout}{handout}{nothandout}
-\ifbool{usnaslides}{slides}{notslides}}
+\newcommand{\mobeardCheckOptions}{
+\ifbool{mobeardhw}{hw}{nothw}
+\ifbool{mobeardquiz}{quiz}{notquiz}\
+\ifbool{mobeardexam}{exam}{notexam}
+\ifbool{mobeardlab}{lab}{notlab}
+\ifbool{mobeardhandout}{handout}{nothandout}
+\ifbool{mobeardslides}{slides}{notslides}}
 
 % course information
-\newcommand{\usnaSchool}{United States Naval Academy}
-\newcommand{\usnaDepartment}{Department of Weapons, Robotics, and Control Engineering}
-\newcommand{\usnaCourseNumber}{EW305}
-\newcommand{\usnaCourseName}{Linear Control Systems}
+\newcommand{\mobeardSchool}{Morristown-Beard School}
+\newcommand{\mobeardDepartment}{Science Department}
+\newcommand{\mobeardCourseNumobearder}{}
+\newcommand{\mobeardCourseName}{Physics 9}
 
 % instructor information
-\newcommand{\usnaInstructor}{Assistant Professor D.~Evangelista}
-\newcommand{\usnaInstructorShort}{D.~Evangelista}
-\newcommand{\usnaOffice}{Hopper}
-\newcommand{\usnaExtension}{x3-6132}
-\newcommand{\usnaEmail}{\url{mailto:\\evangeli@usna.edu}}
-\newcommand{\usnaCourseSection}{6541}
+\newcommand{\mobeardInstructor}{Dr.~D.~Evangelista}
+\newcommand{\mobeardInstructorShort}{D.~Evangelista}
+\newcommand{\mobeardOffice}{MSC xxx}
+\newcommand{\mobeardExtension}{xxx}
+\newcommand{\mobeardEmail}{\url{mailto:\\devangelista@mobeards.net}}
+\newcommand{\mobeardCourseSection}{1 and 3}
 
 % EW305 convenience functions
 \newcommand{\Later}{\textbf{Later}}
@@ -46,7 +46,7 @@
 \RequirePackage{babel}
 \RequirePackage[american]{isodate}
 \dateinputformat{american}
-\newcommand{\usnaCourseTerm}{Fall 2020}
+\newcommand{\mobeardCourseTerm}{AY2021}
 \newcommand{\addDate}{9/3/2020}
 \newcommand{\dropDate}{11/13/2020}
 \newcommand{\firstFinal}{12/10/2020}
@@ -212,7 +212,7 @@
 	columns=fullflexible,
 	showstringspaces=false
 }
-\lstdefinestyle{mbedC}{
+\lstdefinestyle{mobeardedC}{
 	language=C,
 	basicstyle=\ttfamily,
 	keywordstyle=\color{blue}\ttfamily,
@@ -224,7 +224,7 @@
 	showstringspaces=false,
 %	frame=single
 }
-\lstdefinestyle{usnaMatlab}{
+\lstdefinestyle{mobeardMatlab}{
 	basicstyle=\ttfamily,
 	keywordstyle=\color{blue}\ttfamily,
 	stringstyle=\color{magenta}\ttfamily,
@@ -271,15 +271,15 @@
 %\end{framed}
 }
 
-\ifbool{usnahw}{%
+\ifbool{mobeardhw}{%
 \newcommand{\theduedate}{}
 \newcommand{\duedate}[1]{\renewcommand{\theduedate}{#1}}
 \makeatletter
 \renewcommand{\maketitle}{
   \begin{center}
-    \noindent\usnaSchool\\
-    \usnaDepartment\\
-    \usnaCourseNumber\ \usnaCourseName\\
+    \noindent\mobeardSchool\\
+    \mobeardDepartment\\
+    \mobeardCourseNumobearder\ \mobeardCourseName\\
   \end{center}
   Issued: \@date\hfill Due: \theduedate\\
   \hrule
@@ -295,15 +295,15 @@
 \makeatother
 }{}
 
-\ifbool{usnaquiz}{%
+\ifbool{mobeardquiz}{%
 \newcommand{\theduedate}{}
 \newcommand{\duedate}[1]{\renewcommand{\theduedate}{#1}}
 \makeatletter
 \renewcommand{\maketitle}{
   \begin{center}
-    \noindent\usnaSchool\\
-    \usnaDepartment\\
-    \usnaCourseNumber\ \usnaCourseName\\
+    \noindent\mobeardSchool\\
+    \mobeardDepartment\\
+    \mobeardCourseNumobearder\ \mobeardCourseName\\
   \end{center}
   Issued: \@date\\
   \hrule
@@ -320,15 +320,15 @@
 }{}
 
 
-\ifbool{usnalab}{%
+\ifbool{mobeardlab}{%
 \newcommand{\theduedate}{}
 \newcommand{\duedate}[1]{\renewcommand{\theduedate}{#1}}
 \makeatletter
 \renewcommand{\maketitle}{
   \begin{center}
-    \noindent\usnaSchool\\
-    \usnaDepartment\\
-    \usnaCourseNumber\ \usnaCourseName\\
+    \noindent\mobeardSchool\\
+    \mobeardDepartment\\
+    \mobeardCourseNumobearder\ \mobeardCourseName\\
   \end{center}
   Issued: \@date\hfill Due: \theduedate\\
   \hrule
@@ -345,8 +345,8 @@
 
 
 
-\ifbool{usnaexam}{%
-\newcommand{\usnaExamName}{Quiz \#0}
+\ifbool{mobeardexam}{%
+\newcommand{\mobeardExamName}{Quiz \#0}
 
 \makeatletter
 \renewcommand{\maketitle}{%
@@ -354,29 +354,29 @@
   \firstpageheader{}{}{} % nothing on first page
   \firstpagefooter{}{}{} % nothing on first page
   \ifprintanswers
-  \runningheader{\usnaCourseNumber\ \usnaCourseTerm\ \@title\ SOLUTIONS}{}{\makebox[2in]{\hrulefill}} % for solutions
+  \runningheader{\mobeardCourseNumobearder\ \mobeardCourseTerm\ \@title\ SOLUTIONS}{}{\makebox[2in]{\hrulefill}} % for solutions
   \else
-  \runningheader{\usnaCourseNumber\ \usnaCourseTerm\ \@title}{}{\makebox[2in]{\hrulefill}} % normal ones have space for MIDN to write name 
+  \runningheader{\mobeardCourseNumobearder\ \mobeardCourseTerm\ \@title}{}{\makebox[2in]{\hrulefill}} % normal ones have space for MIDN to write name 
   \fi
-  \runningfooter{}{Page \thepage\ of \numpages}{} % and give page numbers
+  \runningfooter{}{Page \thepage\ of \numpages}{} % and give page numobearders
   %
   % now the actual title page stuff
   \begin{center}
-    \usnaSchool\\
-    \usnaDepartment\\
-    \usnaCourseNumber\ \usnaCourseName
+    \mobeardSchool\\
+    \mobeardDepartment\\
+    \mobeardCourseNumobearder\ \mobeardCourseName
   \end{center}
   Date: \@date\\
   \hrule
 
   \begin{center}
-    \textbf{\@title, \usnaCourseTerm}
+    \textbf{\@title, \mobeardCourseTerm}
   \end{center}}
   \makeatother
 
 
 
-\newcommand{\usnaExamNameBlock}{%
+\newcommand{\mobeardExamNameBlock}{%
 \begin{table}[h]
 \begin{center}
 \setlength\extrarowheight{18pt}
@@ -393,11 +393,11 @@
 \setlength\extrarowheight{0pt}
 \end{center}
 \end{table}
-} %usnaExamNameBlock
+} %mobeardExamNameBlock
 }{}
 
-\ifbool{usnaslides}{% Slide specific stuff here? 
-}% usnaslides
+\ifbool{mobeardslides}{% Slide specific stuff here? 
+}% mobeardslides
 {}
 \endinput
 
