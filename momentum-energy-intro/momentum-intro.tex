@@ -1,0 +1,105 @@
+\documentclass[handout]{tufte-handout}
+
+\newcommand{\myroot}{..}
+\usepackage[handout]{\myroot/physics9}
+
+\title{Momentum}
+\date{\today}
+\author{\mobeardInstructorShort}
+
+\begin{document}
+\maketitle
+\marginnote{TLDR: Momentum is the product of mass and velocity, $\vec{p}=m\vec{v}$. You need this to do the Momentum Gizmo exercise that has been assigned.}
+\marginnote{Today momentum; then we move into energy which will continue through Q4.}
+
+\newthought{When we discussed} Newton's laws, we mentioned that the second law is given by
+\begin{quotation}
+The net force acting on an object is equal to the time rate of change of its momentum.
+\end{quotation}
+For \mobeardCourseName, we said \textbf{momentum} is given by
+\begin{equation}
+\vec{p} = m \vec{v}
+\end{equation}
+and then used it to obtain a simplified form of the second law for an object of constant mass\sidenote{For now, just consider the d's to be something like ``the change in'', as Evangelista is too lazy to write $\Delta$.}
+\begin{align}
+\sum \vec{F} &= \dfrac{d \vec{p}}{d t} \\
+&= \dfrac{d (m\vec{v})}{d t} \\
+&= m \dfrac{d \vec{v}}{d t}\ \text{since $m$ is constant} \\
+\text{\textbf{Newton's second law}}\ \sum \vec{F} &= m \vec{a}
+\end{align}
+
+Today we will look a little more at this quantity (linear\sidenote{There is also a quantity called \emph{angular} momentum but we won't deal with that yet in \mobeardCourseName.}) \textbf{momentum}\sidenote{The funny $\equiv$ equal sign with three lines means ``is defined as''.} that we skipped over in our first pass through kinematics and forces: 
+\begin{equation}
+\text{\textbf{momentum}}\ \vec{p} \equiv m \vec{v}
+\end{equation}
+where $m$ is mass, and $\vec{v}$ is the velocity. 
+
+\section{Motivation}
+In kinematics, the three vector quantities position, $\vec{x}(t)$, velocity $\vec{v}(t)$, and acceleration $\vec{a}(t)$ describe the movement of an object, but don't tell us much about things like the object's size or shape\sidenote{The quantities position, velocity, and acceleration are \textbf{intenstive properties} of the object; they don't change if you were to double the object's size or cut it in half, but are properties of the whole object together.}. The force $\vec{F}$ acting on an object might be imposed on it from something, or it might be the result of some interaction of the object and the surroundings; in the most general case the force could be totally independent of things like the object's mass.
+
+We might like to have some quantities that could help us understand the ``impact'' an object's motion might have on stuff it hits; a quantity that could help us get a feel for how hard the object was to get moving, or how hard it would be to make it stop. Enter \textbf{momentum}. 
+
+You may have heard the word momentum used in everyday spoken English language (for example); ``We've got three minutes left in a power play, let's keep up the \emph{momentum} and keep getting shots on goal'', ``I'm on a roll writing these notes I don't want to stop now and lose \emph{momentum}'', ``With 862 runs, the MoBeard cricket team has the \emph{momentum} of a freight train right now, they're UNSTOPPABLE!''  Colloquial usage of physics terms doesn't always line up with what they mean precisely in physics, but here we're pretty fortunate.
+
+\section{Tackle this: a thought experiment}
+By whom would you rather be tackled\sidenote{Carly Rae Jepsen is a Canadian recording artist famous for the song \href{https://www.youtube.com/watch?v=fWNaR-rxAic}{''Call Me Maybe''}. Google lists her height and weight as 5-foot 2-inch and 115 pounds.}? 
+\begin{itemize}
+\setlength{\itemsep}{0em}
+\item[A.] A linebacker (or defenseman, Great Dane) at full gallop
+\item[B.] A linebacker (or defenseman, Great Dane) at a leisurely stroll
+\item[C.] Carly Rae Jepsen (or kicker, Chihuahua) at full gallop
+\item[D.] Carly Rae Jepsen (or kicker, Chihuahua) at a leisurely stroll
+\end{itemize}
+
+Most of us would answer D, but why? There are two main reasons; first, Ms. Jepsen's (or a football kicker's, or a Chihuahua's) \textbf{mass} is much less than that of a linebacker; and second, at a leisurely stroll rather than a full gallop (i.e. at lower \textbf{velocity}) it will hurt less. Thus, if we want to get quantitative, our answer should hinge on something \textbf{combining} mass and velocity. 
+
+We could multiply the two, and it gives us \textbf{momentum\sidenote{Momentum defined. \textbf{Momentum is the product of mass times velocity.} Put it on your notes sheet right now.}}, i.e.: 
+\begin{align}
+\text{momentum} &= \text{mass} \cdot \text{velocity}, \\
+\vec{p} &= m \vec{v}.
+\end{align}
+The resulting quantity momentum ($\vec{p}$) is a \textbf{vector} that points in the same direction as the velocity $\vec{v}$. Its \textbf{units} are \si{\kilo\gram\meter\per\second}, or equivalently, \si{\newton\second}. As mass $m$ gets bigger, momentum increases\sidenote{It is therefore an \textbf{extensive property}.}. Similarly as $|\vec{v}|$ increases, momentum also grows bigger. Aside from it being a vector, which means it is several numbers and not just one, it would appear to be useful in deciding by whom we wish to be tackled.
+
+\section{How to compute momentum}
+Xuan the Guide Dog Puppy (mass \SI{65}{\pound}, \SI{29.4}{\kilo\gram}) is in the park when he is given the command \textbf{come!} He begins running at \SI{8}{\meter\per\second} towards his handler. \textbf{What is Xuan's momentum?}
+
+\subsection{Solution}
+It is straightforward substitution to compute Xuan's momentum; but \textbf{for exam purposes you guys will want to write out all the steps and show exactly what you are thinking!}
+
+First\marginnote{Work it just like this on your exam page!}, identify that this is a \textbf{momentum} problem and so the governing equation you need to use, \textbf{straight from your notes sheet}, is
+\begin{equation}
+\vec{p} = m \vec{v}\ \text{(definition of momentum)}.
+\end{equation}
+
+Next, you will identify from the problem statement the various known quantities, like $m=\SI{29.4}{\kilo\gram}$ and $\vec{v} = \SI{8}{\meter\per\second}\ \text{towards the handler}$. Substitution gives
+\begin{align}
+\vec{p} &= m \vec{v}\\
+&= (\SI{29.4}{\kilo\gram})\cdot(\SI{8}{\meter\per\second}\ \text{towards the handler}) \\
+&= \SI{235}{\kilo\gram\meter\per\second}\ \text{towards the handler}
+\end{align}
+\marginnote{Sanity check -- it should be around 240; and there are units and a direction, so we're good.}
+
+\section{What does it mean? How can I use momentum?}
+When introduced to a new physical quantity, it's a good idea to ask yourself what it means and how it can be used. Momentum is the product of mass and velocity. A bigger, faster object has more momentum than a small, slow one. Momentum as a vector also encodes something about the direction the object is going. Compared to a small object, a massive object takes more effort to get moving, when it is moving it has more momentum, and it takes more effort to get it to stop.  In situations with no outside forces acting, momentum is \textbf{conserved} (more on that below). Momentum helps us understand how a moving object might ``impact'' things that it hits. 
+
+\subsection{Elastic and inelastic collisions and explosions}
+We will do more on this later in physics, but momentum and momentum conservation are great for understanding collisions and explosions. The general idea is that the linear momentum of a system of particles is the same before and after they collide. This is useful in considering things like billiard balls (pool), bocce balls, bullets, bricks thrown out of go-karts, particles, etc. 
+
+\subsection{Fluid mechanics, rocket science}
+Momentum shows up in control volume continuum approaches to fluids\sidenote{Just fluid mechanics, not like it's rocket science... not nuclear engineering}, where we are not tracking individual fluid particles but are instead tracking the momentum crossing into or out of the control volume, or momentum diffusing through a fluid due to the effects of viscosity. We probably won't get to fluid mechanics in \mobeardCourseName, but keep it in mind if you plan to go further in science or engineering. 
+
+In rocket propulsion\sidenote{Just rocket science...}, propulsive thrust is generated by expelling mass out the back of the rocket at high speed. For the same reasons momentum is used to understand collisions and explosions, it can provide understanding here by considering \textbf{impulse} \marginnote{As in ``impulse'' propulsion in nerdy sci-fi space series...}
+\begin{equation}
+\Delta \vec{p} = \vec{F} \Delta t = m \Delta \vec{v},
+\end{equation}
+which provides a handy connection between impulse, the amount of mass being thrown and its relative velocity. Momentum is also useful when integrating equations of motion, i.e. $\sum\vec{F} = \dfrac{d\vec{p}}{dt}$ form of Newton's second law. 
+
+\section{Conservation of momentum}
+The idea that momentum remains constant in the absence of external forces is a useful one. In physics\sidenote{Conservation of linear momentum is a useful thing in physics!}, when we can say something stays constant, it provides a useful clue in solving problems or understanding what is physically happening; we say such quantities are \textbf{conserved} or that they follow a \textbf{conservation law}. More on this later. 
+
+Other quantities that are conserved\sidenote{... so long as things are not moving super fast or doing nuclear things...}  include charge, mass, energy, angular momentum, and some others (when you get to super super advanced physics). More on energy next time. 
+
+
+
+
+\end{document}

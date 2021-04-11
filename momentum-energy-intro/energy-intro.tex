@@ -1,0 +1,119 @@
+\documentclass[handout]{tufte-handout}
+
+\usepackage[handout]{../physics9}
+
+\title{Energy}
+\date{\today}
+\author{\mobeardInstructorShort}
+
+\begin{document}
+\maketitle
+\marginnote{TLDR: Work $W=\vec{F}\cdot\Delta\vec{x}$; gravitational potential energy $GPE=mgh$; and kinetic energy $KE=\frac{1}{2}mv^2$. You may need these to do the Momentum Gizmo or the short daily homework that were assigned.}
+
+\section{Introduction}
+In middle school science class you may have discussed \textbf{energy} and thought about how it comes in different forms. For example, when you go to the gas station and pay 3 bucks a gallon, you are buying gasoline which is \emph{chemical energy}. Similarly, when you plug your laptop into the wall you are getting \emph{electrical energy}. You might consider \emph{nuclear energy}, or \emph{solar energy}, or \emph{wind energy}. You may have heard that \emph{heat} is a form of energy; or that there are notions of \emph{potential energy} stored by weights or springs or pressurized fluids, or \emph{kinetic energy} of something moving. In biology class, they even talk about how that cheeseburger or that banana is energy\sidenote{One crazy biology teacher even asked the class to trace energy as it flowed from the sun, into a leaf, to a banana, then into an MBS hockey player in order to power the game winning shot on goal...}. 
+
+Now that you are in high school, think a little deeper about these. How is it that these are all \textbf{energy}? How is liquid gasoline in a tank similar to voltage coming from the wall, or stretched molecules in a springy crossbow, or a counterweight held up high, or fissioning uranium atoms in a nuclear reactor? 
+
+It seems kind of crazy that all these very different things can be thought of as the \textbf{same type of physical quantity}. Let's think about that some more. 
+
+\section{A thought experiment and some heavy lifting}
+A theme in \mobeardCourseName\ is that we want to start to get quantitative; we want to be able to measure things we care about and use computation and mathematics to gain understanding. We can use thought experiments to help shape our thinking and be precise about big concepts, so let's do one. 
+
+\textbf{MBS Crossfit.} Consider two weights: a \SI{500}{\pound} barbell versus a dinky little \SI{2}{\pound} hand weight. Also, consider two cases: lifting each weight to a height of \SI{0.5}{\meter} or lifting them fully above the head to about \SI{2}{\meter}. Which case does the most \textbf{work\sidenote{Work often means ``mechanical work'' but for purposes of today's discussion we will consider work and energy to be the same... More on this later.}} / requires the most \textbf{energy}? Which case does the least work? 
+
+First, consider the weight, or the \textbf{force} ($F=mg$) that must be exerted to lift a barbell of mass $m$, where $g=\SI{9.81}{\meter\per\second\squared}$. Is it more work to lift a heavy \SI{500}{\pound} barbell or a dinky \SI{2}{\pound} hand weight, all else being equal?\marginnote{Most people would consider it more work to lift the \SI{500}{\pound} barbell!}
+
+Next, consider the \textbf{distance} we must lift the weight.  Does it take more work to lift the weight \SI{0.5}{\meter} or \SI{2}{\meter}?\marginnote{Most people would say it takes more work to lift the weight the full \SI{2}{\meter} height rather than the short \SI{0.5}{\meter}.} 
+
+So the amount of work or energy it takes to do these tasks seems to depend on \textbf{force} and \textbf{distance} over which the force is exerted. To be precise, let's combine those into an equation
+\begin{equation}
+W = \text{force}\cdot\text{distance} = \vec{F}\cdot\Delta\vec{x}
+\label{eq:workdefn}
+\end{equation}
+where $W$ is \textbf{work or energy}, $\vec{F}$ is force, and $\Delta\vec{x}$ is the distance\sidenote[][-1in]{You may notice we use a special notation $\cdot$ rather than $\times$ or plain multiplication; this wrinkle is necessary because otherwise both force $\vec{F}$ and distance $\Delta\vec{x}$ are vectors and so must be multiplied carefully. The $\cdot$ means \textbf{``dot product''} or ``scalar product'' or ``inner product''. For now don't worry about it, but as you progress further in physics you will start to keep track of these things as the work may or may not depend on the \textbf{path} taken.}. This combines the idea that if we exert bigger forces (as in lifting a bigger weight) we are doing more work; and that as we go longer distances we also do more work. 
+
+The units of $W$ are \si{\newton\meter}, or alternatively, Joules\sidenote{The SI unit of energy is the Joule (\si{\joule}), see \url{https://en.wikipedia.org/wiki/Joule}. It is named after English physicist James Prescott Joule, a brewery owner whose meticulous experiments developed the science of thermodynamics and allowed connecting all these various forms of energy together, see \url{https://en.wikipedia.org/wiki/James_Prescott_Joule}. } (\si{joule}), where $\SI{1}{\joule}=\SI{1}{\newton\meter}$. The quantity $W$ is a \emph{scalar}. Sometimes, rather than the letter $W$, you may see the letters $Q$, $U$, or $E$ used to denote energy 
+
+
+
+\vfill
+\section{How to compute work / energy}
+There are various ways to compute energy but let's start with a simple one to warm up. Xuan the Guide Dog Puppy (mass \SI{65}{\pound}, \SI{29.4}{\kilo\gram}) smells a \textbf{half-eaten dropped hamburger}\sidenote{Guide dog puppies work very hard to learn to ignore such distractions.} and starts pulling his handler towards it. Xuan exerts a force os \SI{294}{\newton} and pulls his handler a distance of \SI{1}{\meter}. \textbf{How much work did Xuan do?}
+
+\subsection{Solution}
+The equation you need to use at this point is \fref{eq:workdefn}: 
+\begin{equation}
+\text{work}\ W = \vec{F}\cdot\Delta\vec{x}.
+\label{eq:worksoln1}
+\end{equation}
+
+Next, identify from the problem statement the various known quantities. We know Xuan is exerting $F=\SI{294}{\newton}$ of force, and that the distance traveled is $\Delta x=\SI{1}{\meter}$. For now we assume the two are in line (along his leash).  Substitution into \fref{eq:worksoln1} gives
+\begin{align}
+W &= F\cdot \Delta x \\
+&= (\SI{294}{\newton})\cdot(\SI{1}{\meter}) \\
+&= \SI{294}{\joule}.
+\end{align}
+The mechanical work Xuan does in pulling \SI{1}{\meter} is \SI{294}{\joule}\marginnote{Be sure to put units on your  result and show your work to get partial credit in case of a calculation mistake.}.
+
+
+
+
+\clearpage
+\section{Gravitational potential energy}
+Let's return to the case of lifting weights to think about another way to compute energy. If we were to draw a free body diagram of the weight being lifted, we would see the force required to lift it is 
+\begin{equation}
+\vec{F}=m\vec{g}
+\end{equation}
+where $m$ is mass and $\vec{g}=\SI{-9.81}{\meter\per\second\squared}$ is the acceleration of gravity. Consider then lifting the weight a height $h$. Using \fref{eq:workdefn}, the work required to lift the weight is 
+\begin{align}
+W &= \vec{F}\cdot\Delta\vec{x} \\
+&= (m g) \cdot (h) \\
+&= mgh 
+\end{align}
+where $m$ is mass, $g=\SI{9.81}{\meter\per\second\squared}$, and $h$ is height\sidenote{The operands have lost their vector arrows because of the dot product multiplication.}. The last expression is often called \textbf{gravitational potential energy}:
+\begin{equation}
+\text{gravitational potential energy}\ GPE = mgh .
+\end{equation} 
+
+Gravitational potential energy measures the work done to raise a weight to some height; it represents how much energy would be released in allowing the weight to fall back down to zero height. As we will see in a bit, the equivalence between these is due to \textbf{conservation of energy}. 
+
+
+
+
+\section{Kinetic energy}
+Now consider the case of a mass $m$ that is moving at some velocity $v$. How much energy does it have by virtue of its movement? Alternatively, how much work did it take to get it moving? 
+
+Not sure how to figure this out? Let's fall back on a thought experiment. First let's consider the energy contained by a gnat (small $m$) versus an 18-inch battleship artillery shell (big $M$). Which has more energy?\sidenote{Everything else equal, most people would say the larger mass has more energy.}  Now consider two cases - one that is moving very slowly (small $v$) versus one that is moving very fast (large $v$). Which has more energy?\sidenote{Again, everything else equal, most would say the faster case has more energy.} 
+
+So we think the (kinetic) energy depends on mass $m$ and velocity $v$, but how? Let the units of energy give us a clue:
+\begin{align}
+\si{\joule} &= \si{\newton}\si{\meter} \\
+&=\si{\kilo\gram\meter\per\second\squared} \si{\meter} \\
+&= \si{\kilo\gram\meter\squared\per\second\squared} \\
+&= \si{\kilo\gram} \left( \si{\meter\per\second}\right)^2 
+\end{align}
+
+The units suggest that $m$ (units \si{\kilo]\gram}) and $v$ (units \si{\meter\per\second}) combine in the following way to calculate kinetic energy: 
+\begin{equation}
+KE = f(mv^2).
+\end{equation}
+
+The actual formula for \textbf{kinetic energy}\sidenote{As an alternative derivation, the work $W=F\cdot dx$. $F=ma=m\frac{dv}{dt}$, and $dx=v dt$. Thus, $dW=m \frac{dv}{dt} v dt = mv dv$, and by integrating, $W=KE=\frac{1}mv^2$. You are not responsible for this derivation because it requires use of calculus.} is
+\begin{equation}
+\text{kinetic energy}\ KE = \frac{1}{2} mv^2
+\end{equation}
+where $m$ is mass and $v$ is velocity; $v^2$ is the magnitude of the velocity $\vec{v}$ squared. It is a scalar, and its units are \si{\joule}. 
+
+Kinetic energy represents the energy something has based on how massive and how fast it is moving. Because of conservation of energy, it also represents how much work it took to accelerate the mass to its current speed; as well as how much energy must be dumped in order to bring the mass to a stop. 
+
+
+
+
+
+\section{Conservation of energy} 
+As with conservation of momentum, \textbf{conservation of energy} is a useful principle / law that tells us the energy of a system will remain constant (barring any input or removal of energy). By careful accounting, we can use conservation of energy to solve a wide range of practical physics problems; we will do more of this as Q4 progresses. 
+
+For example, we can imagine a mass that moves up a hill and then slides down the other side. In such a situation, as the mass goes up the hill it gains gravitational potential energy. As it slides down the other side, it is trading the gravitational potential energy for kinetic energy. Such trades between different forms of energy are a good way to understand and quantify the motion of many systems of interest. It is, for example, the principle of operation behind things like roller coasters. 
+
+\end{document}

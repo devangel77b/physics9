@@ -1,0 +1,103 @@
+\documentclass[hw,addpoints,noanswers]{exam}
+
+\usepackage{../physics9}
+
+\title{(daily) Homework: Simple computations with impulse (momentum change)}
+\author{\mobeardInstructorShort}
+\date{\today}
+\duedate{\printdate{4/9/2021}}
+
+\begin{document}
+\maketitle
+
+Read from lesson 1 of the Momentum and Collisions chapter at the Physics Classroom, \url{http://www.physicsclassroom.com/Class/momentum/u4l1b.html} and \url{http://www.physicsclassroom.com/Class/momentum/u4l1c.html}. These questions are adapted from The Physics Classroom. 
+
+For this homework, you use the equation for impulse:
+\begin{equation}
+\text{impulse} = \Delta p = F \Delta t = m \Delta v
+\end{equation}
+where $p$ is momentum, $F$ is force, $\Delta t$ is time, $m$ is mass, and $\Delta v$ is change in velocity. 
+
+\begin{questions}
+\question\label{q1} A car with a mass of \SI{1000}{\kilo\gram} is at rest at a stoplight . When the light turns green, it is pushed by a net force of \SI{2000}{\newton} for \SI{10}{\second}.
+\begin{parts}
+\part What is the value of the \textbf{acceleration} that the car experiences?
+\begin{solution}[48pt]
+$F=ma$, so $a=\dfrac{F}{m}=\dfrac{\SI{2000}{\newton}}{\SI{1000}{\kilo\gram}}$ or $\vec{a}=\SI{2}{\meter\per\second\squared}$ going forward. 
+\end{solution}
+
+\part\label{q1b} What is the value of the \textbf{change in velocity} that the car experiences?
+\begin{solution}[48pt]
+For constant acceleration $v(t)=at+v_0$. $a=\SI{2}{\meter\per\second}$ from part a, $t=\SI{10}{\second}$, and $v_0=0$ since the car starts from rest. Thereore, $v(t=\SI{10}{\second})=\SI{20}{\meter\per\second}$.\end{solution}
+
+\part What is the value of the \textbf{impulse} on the car?
+\begin{solution}[48pt]
+$\text{impulse} = F\Delta t = m\Delta v$. Substitution gives $F\Delta t = \SI{2000}{\newton}\SI{10}{\second} = \SI{20000}{\newton\second}$.
+\end{solution}
+
+\part What is the value of the \textbf{change in momentum} that the car experiences? 
+\begin{solution}[48pt]
+The change in momentum is the same as the impulse, or \SI{20000}{\newton\second}. 
+\end{solution}
+
+\part\label{q1e} What is the \textbf{final velocity} of the car at the end of \SI{10}{\second}?
+\begin{solution}[48pt]
+Working backwards from the other form of the impulse equation gives $m \Delta v = \Delta p$, or $\Delta v= \dfrac{\Delta p}{m}=\dfrac{\SI{20000}{\newton\second}}{\SI{1000}{\kilo\gram}} = \SI{20}{\meter\per\second}$ 
+\end{solution}
+\end{parts}
+
+\question The car from question~\ref{q1} continues at speed (determined in part~\ref{q1}\ref{q1e}) for a while.
+\begin{parts}
+\part \emph{Without computing a bunch of stuff,} what is the value of the change in momentum the car experiences as it continues at this velocity?
+\answerline[\SI{0}{\kilo\gram\meter\per\second}]
+\part \emph{Without computing a bunch of stuff,} what is the value of the impulse on the car as it continues at this velocity?
+\answerline[\SI{0}{\newton\second}]
+\end{parts}
+
+\clearpage
+\question The brakes are applied to the car from part~\ref{q1}\ref{q1b}, causing it to come to rest in \SI{4}{\second}. 
+\begin{parts}
+\part What is the value of the \textbf{change in momentum} that the car experiences?
+\answerline[\SI{-20000}{\kilo\gram\meter\per\second}]
+\part What is the value of the \textbf{impulse} on the car?
+\answerline[\SI{-20000}{\newton\second}]
+\part What is the value of the \textbf{force} (average) that causes the car to stop?
+\begin{solution}[72pt]
+$\text{impulse}=F\Delta t$, so $F = \dfrac{\text{impulse}}{\Delta t} = \dfrac{\SI{-20000}{\newton\second}}{\SI{4}{\second}}$ or $F = \SI{-5000}{\newton}$, which acts to slow the car down. 
+\end{solution}
+\part What is the \textbf{acceleration} of the car as it stops?
+\begin{solution}[72pt]
+$F=ma$, so $a=\dfrac{F}{m}=\dfrac{\SI{-5000}{\newton}}{\SI{1000}{\kilo\gram}}$ or $\vec{a}=\SI{-5}{\meter\per\second\squared}$, slowing the car down. 
+\end{solution}
+ \end{parts}
+ 
+%\section{Momentum and collisions}
+%There is a disease known as formula fixation that is common among physics students. It particularly infects those who perceive physics as an applied math course where numbers and equations are simply combined to solve algebra problems. However, this is not the true nature of physics. Physics concerns itself with ideas and concepts that provide a reasonable explanation of the physical world. When students divorce the mathematics from the ideas, formula fixation takes root and even mathematical problem solving can become difficult. Do you have formula fixation? Test your health by trying these computational problems.
+
+\clearpage
+\question \textbf{Please show your work.} Try to focus on forming reasonable explanations of what is happening in each situation, rather than blind plug-and-chug into the equations. Often, good physical reasoning can make the calculations go much much faster. 
+\begin{parts} 
+\part A force of \SI{800}{\newton} causes an \SI{80}{\kilo\gram} fullback to change his velocity by \SI{10}{\meter\per\second}. Determine the impulse experienced by the fullback.
+\answerline[\SI{800}{\newton\second}]
+\part  A \SI{0.80}{\kilo\gram} soccer ball experiences an impulse of \SI{25}{\newton\second}. Determine the momentum change of the soccer ball. 
+\answerline[\SI{25}{\kilo\gram\meter\per\second}]
+\part A \SI{1200}{\kilo\gram} car is brought from \SI{25}{\meter\per\second} to \SI{10}{\meter\per\second} over a time period of \SI{5.0}{\second}. Determine the force experienced by the car. 
+\begin{solution}[48pt]
+$\dfrac{\SI{1200}{\kilo\gram}(\SI{25}{\meter\per\second}-\SI{10}{\meter\per\second})}{\SI{5.0}{\second}}=\SI{-3600}{\newton}$ slowing the car down. 
+\end{solution}
+\part A \SI{90}{\kilo\gram} tight end moving at \SI{9.0}{\meter\per\second} encounters a \SI{400}{\newton\second} impulse. Determine the velocity change of the tight end.
+\begin{solution}[48pt]
+$\text{impulse} = F\Delta t = m\Delta v$, so $\Delta v= \dfrac{impulse}{m} = \dfrac{\SI{400}{\newton\second}}{\SI{90}{\kilo\gram}}=\SI{4.4}{\meter\per\second}$. 
+\end{solution} 
+\part A \SI{0.10}{\kilo\gram} hockey puck decreases its speed from \SI{40}{\meter\per\second} to \SI{0}{\meter\per\second} in \SI{0.025}{\second}. Determine the force that it experiences. 
+\begin{solution}[48pt]
+The average force is $F=\SI{0.1}{\kilo\gram}\cdot\dfrac{\SI{-40}{\meter\per\second}}{\SI{0.025}{\second}}= \SI{-160}{\newton}$, slowing down the hockey puck. 
+\end{solution}
+\part \textbf{(Challenge!)}  A \SI{0.10}{\kilo\gram} hockey puck is at rest. It encounters a force of \SI{20}{\newton} for \SI{0.2}{\second} that sets it into motion. Over the next \SI{2.0}{\second}, it encounters \SI{0.4}{\newton} of resistance force. Finally, it encounters a final force of \SI{24}{\newton} for \SI{0.05}{\second} in the direction of motion. What is the final velocity of the hockey puck? 
+\begin{solution}[48pt]
+The total impulse is $\Delta p = (20)(0.2)+(-0.4)(0.2)+(24)(0.05) = \SI{5.12}{\newton\second}$. The velocity is then $v = 5.12/0.1 = \SI{51.2}{\meter\per\second}$. 
+\end{solution}
+%You may have been tricked, but those were not intended as trick questions. The questions were intended to test your understanding of the concepts of momentum change, impulse, mass, force, time and velocity change. How is your understanding level progressing? Do you have formula fixation?
+  \end{parts}
+  \end{questions}
+  \end{document}
