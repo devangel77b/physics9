@@ -1,0 +1,86 @@
+\documentclass[quiz,addpoints,noanswers]{exam}
+
+\usepackage[quiz]{../physics9}
+
+\title{Quiz: Inelastic collisions}
+\date{\today}
+\author{\mobeardInstructorShort}
+
+\begin{document}
+\maketitle
+
+
+\begin{questions}
+\question\label{q1} \textbf{Cartoon physics.} Homer Simpson (mass \SI{100}{\kilo\gram}, see \fref{fig:q1}) is distraught that his kids don't think he is cool, so he takes them to Lollapalooza, where he gets hit in the stomach with a cannon. He is then hired to be Cannonball Homer. Predict the effect of such a hit. Assume the mass of the cannonball is \SI{32}{\pound} (\SI{14.5}{\kilo\gram}) and its muzzle velocity on exiting the cannon is \SI{1000}{\foot\per\second} (\SI{305}{\meter\per\second}). Assume Homer's initial velocity is \SI{0}{\meter\per\second} and that the cannonball sticks to him. 
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.5in]{homer.jpg}
+\end{center}
+\caption{Question~\ref{q1} warmup.}
+\label{fig:q1}
+\end{figure}
+\begin{parts}
+\part[1] What type of problem is this?
+\begin{solution}[0.5in]
+momentum conservation, inelastic collision. 
+
+Note that in the actual Simpsons episode, the cannonball \emph{bounces} off Homer's jiggly stomach, which would be an \textbf{elastic} collision; but here we assume \textbf{inelastic} because you are told the cannonball sticks to him. 
+\end{solution}
+\part[1] Write down the relevant equations.
+\begin{solution}[1in]
+\begin{align*}
+p &= m v \\
+p_0 &= m_h v_h + m_c v_c \\
+p_f &= (m_h + m_c) v_f 
+\end{align*}
+\end{solution}
+\part[1] Use algebra to re-arrange your equations to get an equation for the final velocity of the Homer-cannonball system ($v_f$).
+\begin{solution}[1in]
+\begin{equation*}
+v_f = \dfrac{\cancelto{0}{m_h 0} + m_c v_c}{m_h + m_c}
+\end{equation*}
+\end{solution} 
+\part[1] Identify the numerical value for the variables of interest (e.g. masses, velocities before the collision).  Please give the variable, numerical value, and the correct units. 
+\begin{solution}[0.5in]
+$m_h = \SI{100}{\kilo\gram}$, $v_h=\SI{0}{\meter\per\second}$, $m_c=\SI{14.5}{\kilo\gram}$, $v_c=\SI{305}{\meter\per\second}$. 
+\end{solution}
+\part[1] Find the numerical value of the final velocity of the Homer-cannonball system ($v_f$). Be sure to include units and a reasonable number of significant figures. 
+\begin{solution}
+$v_f = \SI{39}{\meter\per\second}$. 
+\end{solution}
+\end{parts}
+
+\ifprintanswers
+\else
+\clearpage
+\fi
+\question\label{q2} \textbf{Counter-drone kinetic interceptor.} A Physics 9 student is sick of hearing about drones from the Q3 test and decides to take the new Drone Engineering class in order to develop devices that can knock a drone out of the sky. She develops a new counter-drone kinetic interceptor (mass $m$) and decides to test it by launching it at a target drone (represented by a wooden block of mass $M$) hanging from the ceiling in MSC106 (see \fref{fig:q2}).
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=2in]{ballistic.png}
+\end{center}
+\caption{Question~\ref{q2}. Now you show what you know.}
+\label{fig:q2}
+\end{figure}
+\begin{parts}
+\part[5] Assume the interceptor works by hitting the target and sticking to it. Identify what type of collision this is, and solve for the final velocity ($v_f$) of the system immediately after the collision, based on the interceptor mass ($m$), the interceptor initial velocity ($v_0$), the target mass ($M$), and the target initial velocity ($v_M$). 
+\begin{solution}[3in]
+Assume momentum conservation for an inelastic collision.
+\begin{align*}
+p &= m v \\
+p_0 &= m v_0 + M 0 \\
+p_f &= (m + M) v_f \\
+v_f &= \dfrac{m v_0 + \cancelto{0}{M 0}}{m+M}   
+\end{align*}
+\end{solution}
+\bonuspart[1] Assuming the target initial velocity $v_M=\SI{0}{\meter\per\second}$, write an expression for the highest height $h$ the system will swing to\footnote{Hint: consider energy conservation.}.
+\begin{solution}[1in]
+\begin{align*}
+(m+M)gh &= \frac{1}{2} (m+M) v_f^2 \\
+h &= \dfrac{v_f^2}{2g}
+\end{align*}
+\end{solution}
+\end{parts}
+
+\end{questions}
+\end{document}

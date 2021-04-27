@@ -1,0 +1,49 @@
+\documentclass[handout]{tufte-handout}
+
+\newcommand{\myroot}{..}
+\usepackage[handout]{\myroot/physics9}
+\usepackage{textcomp}
+
+\title{Momentum -- (inelastic) collisions}
+\date{\today}
+\author{\mobeardInstructorShort}
+
+\begin{document}
+\maketitle
+
+\newthought{Momentum conservation} gives a nice way to understand \textbf{collisions}. When two bodies collide, the total momentum of the two bodies before the collision is equal to the total momentum afterwards. 
+
+\section{Types of collisions}
+Today we will deal with \textbf{inelastic collisions}\sidenote{Inelastic collisions are not the only possibility; in an \textbf{elastic collision}, the bodies bounce off each other and do not stick together. Another possibility is an \textbf{explosion}, when a single body breaks into two or more that fly off in different directions.}, which are when the two bodies stick together after colliding. 
+
+\subsection{Momentum is conserved in an inelastic collision}
+\textbf{Momentum is conserved in an inelastic collision.} Let us consider the case of two masses, $m_1$ and $m_2$, with velocities $v_1$ and $v_2$, respectively\sidenote{For now we will only consider 1D motion.}. The initial momentum is given by 
+\begin{equation}
+p_0 = m_1 v_1 + m_2 v_2\ \text{initial momentum}.
+\end{equation} 
+
+The two masses stick together, forming a single mass equal to $m_1+m_2$. The final velocity is then obtained from momentum conservation
+\begin{equation}
+p_f = (m_1 + m_2) v_f = p_0.
+\end{equation}
+ 
+ We can substitute for $p_0$ and solve for $v_f$:
+ \begin{align}
+ (m_1 + m_2) v_f &= m_1 v_1 + m_2 v_2 \\
+ \dfrac{1}{\cancel{m_1 + m_2}} \cancel{(m_1 + m_2)} v_f &= \dfrac{1}{(m_1 + m_2)} (m_1 v_1 + m_2 v_2) \\
+ v_f &= \dfrac{m_1 v_1 + m_2 v_2}{m_1 + m_2} .
+ \end{align}
+
+\subsection{Energy decreases in an inelastic collision}
+\textbf{Energy decreases during an inelastic collision.} The kinetic energy before the collision is 
+\begin{equation}
+E_0 = \frac{1}{2} m_1 v_1^2 + \frac{1}{2} m_2 v_2^2
+\end{equation}
+
+Some energy is lost when the two bodies stick together. The kinetic energy after the collision is\sidenote{If you were to look a frame moving at the average speed of the two bodies, you would see the kinetic energy in this frame must be eaten up when the two bodies stick.}
+\begin{align}
+E_f &= \frac{1}{2} (m_1 + m_2) v_f^2 \\
+&= \frac{1}{2} \dfrac{(m_1 v_1 + m_2 v_2)^2}{m_1 + m_2} 
+\end{align}
+
+\end{document}

@@ -22,6 +22,26 @@ A \SI{10}{\kilo\gram} medicine ball is thrown at a velocity of \SI{15}{\kilo\met
 \begin{parts}
 \part[1] Fill in the before- and after-collision table below.
 \begin{table}[h]
+\ifprintanswers
+First, convert \SI{15}{\kilo\meter\per\hour} to \SI{4.2}{\meter\per\second}. Then compute $p=mv$ before the collision and apply \textbf{momentum conservation} to get total $p$ after the collision. The change in total momentum will be 0. 
+\begin{center}
+\begin{tabular}{|l|p{1in}|p{1in}|p{1in}|} \hline
+& $p$ before collision & $p$ after collision & $\Delta p$ \\ \hline
+ball & 42 & & \\ \hline
+skater & 0 & & \\ \hline
+total &42 & 42 & 0 \\ \hline
+\end{tabular}
+\end{center}
+Now compute the final velocity of the ball+skater since $(10+50)v = 42$, so $v=\SI{0.7}{\meter\per\second}$ for an \textbf{inelastic collision}. We can now fill in the rest of the table, using $p=mv$ to find the momentum of the ball and skater after the collision. 
+\begin{center}
+\begin{tabular}{|l|p{1in}|p{1in}|p{1in}|} \hline
+& $p$ before collision & $p$ after collision & $\Delta p$ \\ \hline
+ball & 42 & \textbf{7} & \textbf{-35} \\ \hline
+skater & 0 & \textbf{35} & \textbf{+35} \\ \hline
+total & 42 & 42 & 0 \\ \hline
+\end{tabular}
+\end{center}
+\else
 \begin{center}
 \begin{tabular}{|l|p{1in}|p{1in}|p{1in}|} \hline
 & $p$ before collision & $p$ after collision & $\Delta p$ \\ \hline
@@ -30,17 +50,35 @@ skater & & & \\ \hline
 total & & & \\ \hline
 \end{tabular}
 \end{center}
+\fi
 \end{table}
 \part[1] Determine the velocity of medicine ball and the skater after the collision. 
 \begin{solution}[1in]
+\begin{align*}
+\SI{42}{\newton\second} &= (\SI{10}{\kilo\gram}+\SI{50}{\kilo\gram}) v_f \\
+v_f &= \SI{0.7}{\meter\per\second}.
+\end{align*}
+
+The solution for the other questions follows the exact same steps as this one. 
 \end{solution}
 \end{parts}
 
+\ifprintanswers\clearpage\fi
 \question
 A large fish with a mass of \SI{1}{\kilo\gram} is in motion at \SI{45}{\centi\meter\per\second} when it encounters a smaller fish ($m=\SI{0.25}{\kilo\gram}$) that is at rest. The large fish swallows the smaller fish and continues in motion at a reduced speed.
 \begin{parts}
 \part[\half] Fill in the before- and after-collision table below.
 \begin{table}[h]
+\ifprintanswers
+\begin{center}
+\begin{tabular}{|l|p{1in}|p{1in}|p{1in}|} \hline
+& $p$ before collision & $p$ after collision & $\Delta p$ \\ \hline
+large fish & 0.45 & 0.36 & -0.09 \\ \hline
+small fish & 0 & 0.09 & +0.09 \\ \hline
+total & 0.45 & 0.45 & 0 \\ \hline
+\end{tabular}
+\end{center}
+\else
 \begin{center}
 \begin{tabular}{|l|p{1in}|p{1in}|p{1in}|} \hline
 & $p$ before collision & $p$ after collision & $\Delta p$ \\ \hline
@@ -49,9 +87,14 @@ small fish & & & \\ \hline
 total & & & \\ \hline
 \end{tabular}
 \end{center}
+\fi
 \end{table}
 \part[\half] Determine the velocity of the large and the small fish after the collision.
 \begin{solution}[1in]
+\begin{align*}
+\SI{0.45}{\kilo\gram\meter\per\second} &= (\SI{1}{\kilo\gram}+\SI{0.25}{\kilo\gram}) v_f \\
+v_f &= \SI{0.36}{\meter\per\second}.
+\end{align*}
 \end{solution}
 \end{parts}
 
@@ -62,6 +105,16 @@ A \SI{0.150}{\kilo\gram} baseball moving at a speed of \SI{45.0}{\meter\per\seco
 \begin{parts}
 \part[\half] Fill in the before- and after- collision table below.
 \begin{table}[h]
+\ifprintanswers
+\begin{center}
+\begin{tabular}{|l|p{1in}|p{1in}|p{1in}|} \hline
+& $p$ before collision & $p$ after collision & $\Delta p$ \\ \hline
+baseball & 6.75 & 2.53 & -4.22 \\ \hline
+catcher's mitt & 0 & 4.22 & +4.22 \\ \hline
+total & 6.75 & 6.75 & 0 \\ \hline
+\end{tabular}
+\end{center}
+\else
 \begin{center}
 \begin{tabular}{|l|p{1in}|p{1in}|p{1in}|} \hline
 & $p$ before collision & $p$ after collision & $\Delta p$ \\ \hline
@@ -70,9 +123,14 @@ catcher's mitt & & & \\ \hline
 total & & & \\ \hline
 \end{tabular}
 \end{center}
+\fi
 \end{table}
 \part[\half] Determine the velocity of the baseball/catcher's mitt immediately after the collision.
 \begin{solution}[1in]
+\begin{align*}
+\SI{6.75}{\kilo\gram\meter\per\second} &= (\SI{0.15}{\kilo\gram}+\SI{0.25}{\kilo\gram}) v_f \\
+v_f &= \SI{16.88}{\meter\per\second}.
+\end{align*}
 \end{solution}
 \end{parts}
 
@@ -84,14 +142,19 @@ total & & & \\ \hline
 \begin{center}
 \begin{tabular}{|l|p{1in}|p{1in}|p{1in}|} \hline
 & $p$ before collision & $p$ after collision & $\Delta p$ \\ \hline
-truck & & & \\ \hline
-car & & & \\ \hline
-total & & & \\ \hline
+truck & 19200 & 3840 & -15360 \\ \hline
+car & -14400 & 960 & +15360 \\ \hline
+total & 4800 & 4800 & 0 \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
 \part[\half] Determine the velocity of the truck and car immediately after the collision.
 \begin{solution}[1in]
+\begin{align*}
+\SI{4800}{\kilo\gram\meter\per\second} &= (\SI{4800}{\kilo\gram}+\SI{1200}{\kilo\gram}) v_f \\
+v_f &= \SI{0.8}{\meter\per\second}.
+\end{align*}
+Be careful with the signs to reflect that the car and the truck are traveling in different directions. 
 \end{solution}
 \end{parts}
 \end{questions}

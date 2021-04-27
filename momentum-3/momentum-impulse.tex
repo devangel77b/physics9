@@ -1,0 +1,124 @@
+\documentclass[handout]{tufte-handout}
+
+\newcommand{\myroot}{..}
+\usepackage[handout]{\myroot/physics9}
+\usepackage{textcomp}
+
+\title{Momentum -- impulse}
+\date{\today}
+\author{\mobeardInstructorShort}
+
+\begin{document}
+\maketitle
+\marginnote{TLDR: The equation for impulse is $\Delta p = F \Delta t = m \Delta v$.}
+\marginnote{A good habit to pick up is to actually read the textbook or the notes.}
+
+\section{Introduction}
+Recall Newton's second law, which we wrote in simplified form as 
+\begin{equation}
+\sum \vec{F} = m \vec{a}.
+\label{eq:secondlaw}
+\end{equation}
+Also recall the definition of acceleration
+\begin{equation}
+\text{acceleration}\ a = \dfrac{\text{change in velocity}}{\text{change in time}} = \dfrac{\Delta v}{\Delta t}.
+\label{eq:acceleration}
+\end{equation}
+Combining \fref{eq:secondlaw} and \fref{eq:acceleration} gives
+\begin{equation}
+F = m \dfrac{\Delta v}{\Delta t},
+\end{equation}
+which we can rearrange by multiplying both sides by $\Delta t$:
+\begin{equation}
+F \Delta t = m \Delta v.
+\label{eq:impulse1}
+\end{equation}
+
+The terms on both sides of \fref{eq:impulse1} have units of \si{\newton\second} or \si{\kilo\gram\meter\per\second}, which are both units of momentum. You might remember we introduced these as \textbf{impulse} when we introduced momentum\sidenote{Here we drop the vector symbols because in \mobeardCourseName, we will probably only consider one-dimensional problem.}:
+\begin{equation}
+\Delta p = F \Delta t = m \Delta v. 
+\label{eq:impulse}
+\end{equation}
+
+\subsection{Uses of impulse}
+Impulse as given in \fref{eq:impulse} is quite useful when you have a device (such as a rocket motor) that puts out some amount of force over a fixed amount of time. Often, what we care most about is the final velocity, and \fref{eq:impulse} gives a very straightforward way to compute it. 
+
+For example, model rocket motors (\fref{tab:rocketmotors}) are classified and purchased based on the impulse they produce. When purchasing a rocket motor, the manufacturer will specify the impulse, the average force, and the delay between the end of the thrust phase and the ignition of any ejection charges. 
+\begin{margintable}
+\caption{Model rocket motor size classes. Do not memorize this table or put it on your notes, if you need information like this on a test you it will be given to you.}
+\label{tab:rocketmotors}
+\begin{center}
+\begin{tabular}{rr}
+\toprule
+class & impulse, \si{\newton\second} \\
+\midrule
+\textonequarter A & \numrange{0.313}{0.625} \\
+\textonehalf A & \numrange{0.626}{1.25} \\
+A & \numrange{1.26}{2.50} \\
+B & \numrange{2.51}{5.0} \\
+C & \numrange{5.01}{10} \\
+D & \numrange{10.01}{20}\\
+E & \numrange{20.01}{40}\\
+F & \numrange{40.01}{80}\\
+G & \numrange{80.01}{160}\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{margintable} 
+
+In full-scale space propulsion, impulse provides a way to quickly calculate how long a thruster should be fired given some desired change in velocity. 
+
+Impulse may also be used in considering the average force on a structure from a time varying (such as a periodic) load. 
+
+\clearpage
+\section{Example problems}
+Clear hints to use impulse, i.e. \fref{eq:impulse}, in a problem include when the impulse is mentioned, or when you have three out of four of: force, time, mass, or velocity. These often show up in the context of cars accelerating or decelerating, football or hockey players or balls or pucks being hit by impulses, etc. 
+
+As you learn about concepts in physics, see if you can think of example questions on your own that stretch your ability to apply the concepts. 
+
+\subsection{Example: a car accelerating from rest at a stoplight}
+In a typical problem of this type, a car of mass $m$ is waiting at a stoplight. The light turns green, and the car experiences a force $F$ over some time $\Delta t$ that might be from the driver hitting the gas pedal for $\Delta t$ seconds. What is the car's final velocity? 
+
+You could do this using Newton's second law ($F=ma$) and kinematics:
+\begin{align}
+a &= \dfrac{F}{m} \\
+v &= a t + \cancelto{0}{v_0} \\
+&= \dfrac{F}{m} \Delta t \\
+x &= \dfrac{1}{2} a t^2 + \cancelto{0}{v_0} t + \cancelto{0}{x_0} \\
+&= \dfrac{1}{2} \dfrac{F}{m} (\Delta t)^2
+\end{align}
+by finding the acceleration, then finding the velocity, and, optionally, the position. This takes several steps. 
+
+A \textbf{shorter way}, if the position is not required, is to use \textbf{impulse}, i.e. \fref{eq:impulse}:
+\begin{align}
+\text{impulse equation}\ \dfrac{1}{\cancel{m}} \cancel{m} \Delta v &= \dfrac{1}{m} F \Delta t \\
+\Delta v &= \dfrac{F}{m} \Delta t.
+\end{align}
+The benefit is it gives us the answer in one step, which is \textbf{faster} and less prone to errors.  Write out your approach, then fill in the numbers, then make sure your answer makes sense and has the right units. 
+
+\subsection{Example: a car braking}
+A common variation is to consider the car during braking. A car of mass $m$ is traveling at speed $v$. In order to not hit Bambi, the car must stop in time $\Delta t$. What average braking force is required? 
+\begin{align}
+F \Delta t = m \Delta v \\
+F = m \dfrac{\Delta v}{\Delta t}.
+\end{align}
+Note this could also be obtained through the definition of acceleration. If you choose to do such a problem using impulse and momentum, note that you are simply re-arranging \fref{eq:impulse} as necessary to get the unknown quantity on one side and the known quantities on the other. 
+ 
+
+\subsection{Examples in sports}
+Sports related problems often center around a sportsperson of mass $m$ who experiences either an impulse $\Delta p$ or a certain force $F$ over a time $\Delta t$. The problem might ask to find the change in velocity.
+\begin{align}
+\Delta p = F \Delta t = m \Delta v \\
+\Delta v = \dfrac{1}{m} \Delta p = \dfrac{F}{m} \Delta t.
+\end{align}
+
+You might be tempted to write down all these different formulas... I suggest you \textbf{don't}; instead try to see them as manipulations of \fref{eq:impulse} that you can do on the fly quickly, This way you have less stuff to write down, look up, or get confused; instead use the base concept and your brain to adapt it as necessary. 
+
+
+
+\subsection{Rocket example}
+You wish to make a functioning ejection seat for a Buzz Lightyear action figure of mass $m$. Select a size of rocket motor from \fref{tab:rocketmotors} and specify how many are needed to achieve an ejection velocity of $v$ from rest (a so-called ``zero-zero'' ejection seat design). 
+
+The impulse required is $\Delta p = m \Delta v$. Use the table data to select a rocket motor(s) in the required range. 
+
+\end{document}
