@@ -279,3 +279,9 @@ TSWLatexianTemp*
 .DS_Store
 .DS_Store
 .DS_Store
+.DS_Store
+momentum-noodling/.Rapp.history
+momentum-noodling/.RData
+momentum-noodling/.Rhistory
+*.csv~
+*.bib~

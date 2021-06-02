@@ -1,0 +1,39 @@
+\documentclass [hw,addpoints,noanswers]{exam}
+
+\usepackage[hw]{physics9}
+
+\title{Quiz: Egg (bocce ball) drop calculations}
+\author{\mobeardInstructorShort}
+\date{\today}
+\duedate{in class}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Remember to include some simple calculations in your design notebook, and to start reviewing Q3 and Q4 material for the end of year Q4 test! 
+\end{abstract}
+
+\begin{questions}
+\question[3] We found the acceleration of gravity to be $g=\SI{-9.81}{\meter\per\second}$ when we analyzed the data from dropping things from the balcony. Using this result, compute the speed of the bocce ball after an $x=\SI{1}{\meter}$ drop, at the instant in time $t$ just before it hits your device. You may need the following equations: 
+\begin{align*}
+x &= \frac{1}{2} a t^2 \\
+v &= a t,
+\end{align*}
+or, alternatively, $GPE=mgh$, $KE=\frac{1}{2}mv^2$.
+\begin{solution}[2.5in]
+Using energy conservation, $mgh=\frac{1}{2}mv^2$, so $v^2 = 2gh$ or $v=\sqrt{2 g h}=\SI{4.4}{\meter\per\second}.$ Be sure to include proper units. You could also do this problem using kinematics but it will take two steps (solve for $t$ then find $v$). \textbf{It may be smart to include this calculation in your design notebook.}
+\end{solution}
+
+\question[2] The mass of the bocce ball is $m=\SI{0.520}{\kilo\gram}$. Assuming $\Delta v=\SI{4.4}{\meter\per\second}$ and the desired average force is \SI{125}{\newton}, what is the minimum allowable $\Delta t$ for the collision? You may need the equation $F \Delta t = m \Delta v$. 
+\begin{solution}[2.5in]
+Using momentum conservation, $F \Delta t = m \Delta v$, so
+\begin{align*}
+\Delta t &= \dfrac{m \Delta v}{F} \\
+&= \dfrac{\SI{0.520}{\kilo\gram} \cdot \SI{4.4}{\meter\per\second}}{\SI{125}{\kilo\gram\meter\per\second\squared}} \\
+&= \SI{0.02}{\second}.\ \text{Check units!} 
+\end{align*}
+\textbf{It may be smart to include this calculation in your design notebook} and guesstimate $\Delta t$ for a number of design cases. 
+\end{solution}
+\end{questions}
+\end{document}

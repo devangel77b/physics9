@@ -1,0 +1,133 @@
+\documentclass [handout]{tufte-handout}
+
+\usepackage{physics9}
+
+\title{Q4 Study Guide}
+\author{\mobeardInstructorShort}
+\date{\today}
+
+\begin{document}
+\maketitle
+The Q4 test will be in class on \printdate{6/2/2021}. You may use two (2) hardcopy sheets of \SI{8.5x11}{\inch} notes (both sides) and a calculator. Please do not plan to use your phone or your computer as either your notes or your calculator.  \marginnote{The Q4 test will be on \printdate{6/2/2021} and will cover 1D kinematics plus momentum primarily. Really basic energy conservation may also be covered. Projectile motion in 2D will not be covered.} Material from Q3 is fair game! Physics builds on previous physics and there is no way to separate momentum from the kinematics material covered during Q3. Also, use your \textbf{flash cards} to make sure you are solid regarding equations, correct units, etc. 
+
+\section{Kinematics}
+Kinematics is the quantitative study of motion. To describe how an object moves, we typically describe its position, velocity, and acceleration in some useful coordinate system / coordinate frame. 
+\subsection{Position, velocity, acceleration}
+\textbf{Position} is a vector and describes where an object is in space relative to an established coordinate system. Typical SI units for position are \si{\meter}. I normally use $\vec{r}$, $\vec{x}$, or $\vec{y}$ as variables to describe position, often with an arrow over them to remind me they are vectors. 
+
+\textbf{Velocity} is also a vector and describes the \textbf{time rate of change of position}. Its units are \si{\meter\per\second}. I normally use $\vec{v}$ to represent velocity. Considering $\Delta$ or $d$ as a ``change in'', velocity becomes
+\begin{align}
+\text{velocity} &= \dfrac{\text{change in position}}{\text{change in time}} \\
+&= \dfrac{\Delta \vec{x}}{\Delta t} = \dfrac{d\vec{x}}{dt} 
+\end{align}
+\marginnote{The last form, read ``dee x dee tee,'' is how velocity is typically written as a ``derivative'' in \textbf{calculus}, an advanced type of math that was invented partially to make physics easier to understand. The ``time rate of change of position'' relationship means that \textbf{velocity is like the slope of a position versus time graph,} and that \textbf{position is like the area under a velocity versus time graph.} }
+
+\textbf{Acceleration} is obtained from doing a Madlibs sort of thing... we take it as the \textbf{time rate of change of velocity}. Its units are \si{\meter\per\second\squared}. I normally use $\vec{a}$ to represent acceleration. 
+\begin{align}
+\text{acceleration} &= \dfrac{\text{change in velociy}}{\text{change in time}} \\
+&= \dfrac{\Delta \vec{v}}{\Delta t} = \dfrac{d\vec{v}}{dt} 
+\end{align}
+\marginnote{The ``time rate of change of velocity'' relationship means that \textbf{acceleration is like the slope of a velocity versus time graph,} and that \textbf{velocity is like the area under an acceleration versus time graph.}}
+
+\subsection{Related scalar quantities}
+Vector position or \textbf{displacement} are related to the scalar quantity \textbf{distance}.  \textbf{Distance} will normally be considered to be the total distance traveled along a path from $\vec{x}_0$ to $\vec{x}_f$ and is only a simple number (e.g. 50 miles) so it is a scalar quantity.  \textbf{Displacement} is a vector quantity and is normally taken as $\vec{x}_f - \vec{x}_0$. 
+
+Vector velocity is related to the scalar quantity \textbf{speed}. Speed is normally either the scalar magnitude of velocity, e.g. instantaneous speed, $|v|$, or the total distance traveled divided by the total time (average speed). 
+
+\subsection{1D motion with constant velocity}
+The following equations hold for 1D motion at \textbf{constant velocity}, which means the speed \emph{and direction} of the object are not changing:
+\marginnote{If you are working a problem and you realize it is dealing with motion at constant velocity, write the words \lstinline{constant velocity} and copy these equations immediately into your answer, then continue working with them. Show what you are thinking.}
+\begin{align}
+x(t) &= v t + x_0 \\
+v(t) &= v\ \text{(constant)} \\
+a(t) &= 0
+\end{align}
+Examples of 1D motion at constant velocity would include things like a skier moving at \SI{5}{\meter\per\second} north; a softball in space with no forces acting on it; or an object that is not accelerating. The big example fo this is when we pushed people on chairs at constant speed, and also the horizontal component of the marble shooting experiment. 
+
+\subsection{1D motion with constant acceleration}
+The following equations hold for 1D motion with \textbf{constant (linear) acceleration}, which means there is a net force acting on the object that makes it go faster or slower. 
+\marginnote{If you are working a problem and you realize it is dealing with motion with constant acceleration, write the words \lstinline{constant acceleration} and copy these equations immediately into your answer, then continue working with them. Show what you are thinking.}
+\begin{align}
+x(t) &= \dfrac{1}{2} a t^2 + v_0 t + x_0 \\
+v(t) &= at + v_0 \\
+a(t) &= a\ \text{(constant)} 
+\end{align}
+Examples of 1D motion with constant acceleration include the case of a ball dropped from the second floor balcony, or a car at a stop light when it hits the accelerator and before shifting gears, or a rocket ship firing a thruster with a specified force output. The big example of this is when we dropped stuff from the balcony; as well as the vertical component of the marble shooting experiment. 
+
+\textbf{For this test, do not expect 2D or 3D motion; or motions that cannot be modeled as either constant velocity or constant acceleration.}
+
+\section{Forces}
+\textbf{Forces} can come from things like weight (gravity), aerodynamic lift or drag, thrust from an engine, friction from the ground, normal forces from the ground; forces also arise from charges, electric and magnetic fields, reaction forces, etc etc. The SI unit of force is a \si{\newton}, defined as \SI{1}{\kilo\gram\meter\per\second\squared}. You may also see force specified as pounds force (lbf) when working with non-SI units (such as in specifying the thrust of a jet engine). The form of Newton's second law used in Physics 9 also gives 
+\begin{align}
+\text{net force} &= \text{mass} \cdot \text{acceleration} \\
+\sum\vec{F} &= m\vec{a}
+\end{align}
+
+\subsection{Free body diagrams}
+\textbf{Free body diagrams} are ways to visualize the force acting on an object. The object is drawn isolated from the rest of the universe, and arrows are used to show the forces that are acting on it and their location and directions. This is a useful tool in analyzing the mechanics of all sorts of things\sidenote{\textbf{Know how to draw a proper free body diagram. Focus on what the forces are and where and what direction they are acting. People spent too much time trying to draw cute robots or skydiving spies on the Q3 test and not enough time drawing forces!}}
+
+\section{Newton's laws}
+\begin{enumerate}
+\item An object at rest will stay at rest, unless acted upon by an outside force; an object in motion will stay in motion unless acted upon by an outside force. 
+\item If there is an outside force acting, the sum of the forces will equal the time rate of change of momentum\sidenote{Momentum is $\vec{p} = m \vec{v}$ and is the product of mass and velocity.}. Since in Physics 9 we are usually dealing with objects of constant mass, a simpler version of this law is just
+\begin{equation}
+\sum\vec{F} = m \vec{a} 
+\end{equation}
+where $\sum\vec{F}$ is the net force or the sum of the forces, $m$ is mass, and $\vec{a}$ is acceleration. 
+\item For every action, there is an equal and opposite reaction. 
+\end{enumerate}
+
+The first law could also be viewed as the case of the second law where $\vec{a}=0$, and (together with the third law) is studied most in ``statics''\sidenote{First course taken by many engineers in college...}, when considering the balance of forces for and within objects that are not accelerating. 
+
+The second law shows up most in cases where objects are accelerating, such as in studies of vehicles, maneuvers, propulsion systems, or generally in ``dynamics''\sidenote{Second course taken by many engineers in college...}. 
+
+
+\section{Momentum and impulse}
+\textbf{Momentum is the product of mass times velocity}:
+\begin{equation*}
+\text{momentum}\ \vec{p} = m \vec{v}.
+\end{equation*}
+It reflects how much mass is moving and how fast it is going. It is like the hitting power of a bullet, which depends on both the mass and the velocity. Expect to use momentum in problems dealing with bullets, collisions, things smacking together and sticking or bouncing. 
+
+The \textbf{impulse equation} comes from looking at when forces are applied, or when objects change velocity. \marginnote{If you get a problem and realize it deals with the impulse equation, immediately write \lstinline{impulse equation} and copy these equations onto your paper. Show your thinking, show what you know.}
+\begin{equation*}
+F \Delta t = m \Delta v
+\end{equation*}
+Know how to use this equation to compute the average force acting on a body that has changed velocity due to rocket motors, friction, etc. 
+
+\subsection{Momentum conservation during collisions}
+We thought about three types of collisions: \textbf{elastic collisions, inelastic collisions, and explosions}. \textbf{Most likely you will see inelastic collisions on the test}. During elastic collisions, the bodies bounce off one another. During an explosion, two bodies initially stationary explode apart. Momentum is \textbf{conserved} in all of these; in other words, \textbf{the momentum of the system before the collision or explosion is the same as the momentum of the system after}.
+
+\subsection{Inelastic collisions}
+In \textbf{inelastic collisions, the bodies collide and stick together}. Momentum is conserved during this type of collision. The governing equation is \marginnote{If you get a problem and realize it deals with inelastic collisions, immediately write \lstinline{inelastic collision} and copy these equations onto your paper. Show your thinking, show what you know.}
+\begin{equation*}
+m_1 v_{1,0} + m_2 v_{2,0} = (m_1 + m_2) v_{f},
+\end{equation*} 
+or the initial momentum of the system is equal to the final momentum of the system. Use the word problem to identify which terms are zero and which terms are known, then solve for the unknown, which is typically $v_f$. 
+
+Examples of inelastic collisions that you should be comfortable with: inelastic collisions of carts on the momentum track experimnent; inelastic collisions of a bocce ball with your device; any of the pogils/gizmo/etc in class exercise examples, e.g. big fish eats little fish, cars crash, etc... 
+
+\section{Energy}
+Energy we didn't cover so much but review your notes. Two important ideas in energy are \textbf{gravitational potential energy}:
+\begin{equation*}
+GPE = mgh
+\end{equation*}
+and \textbf{kinetic energy}:
+\begin{equation*}
+KE = \frac{1}{2} m v^2
+\end{equation*}
+A typical problem with energy might involve a roller coster and ask you to recognize that \textbf{energy is conserved}, such as converting the GPE of the roller coaster at the highest hill to KE at the bottom. Energy is \textbf{not} conserved during inelastic collisions (energy of system decreases) nor during explosions (energy of system increases). 
+
+\section{Stuff from lab and projects}
+Know how to compute the velocity of the falling bocce ball just before it hits your device (i.e. the quiz!)
+
+Know how to predict the velocity of a system after an inelastic collision has occurred like in the lab writeup. 
+
+Know how to apply the impulse equation so that, if you could estimate a $\Delta t$ for a collision to occur during, you could estimate the force $F$ acting on something (as in your device design and in the quiz!). 
+
+\section{2D projectile motion}
+We only covered 2D projectile motion briefly at the end. You are not responsible for 2D projectile motion for this test. 
+
+
+\end{document}
+
