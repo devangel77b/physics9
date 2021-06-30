@@ -288,3 +288,4 @@ momentum-noodling/.RData
 momentum-noodling/.Rhistory
 *.csv~
 *.bib~
+.DS_Store
